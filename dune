@@ -1,0 +1,4 @@
+(executable
+ (name clz)
+ (modules clz tinyperfmon)
+ (libraries core))
