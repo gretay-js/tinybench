@@ -1,4 +1,14 @@
+(library
+        (name tinyperfmon)
+        (modules tinyperfmon)
+        (libraries core))
+
 (executable
  (name clz)
- (modules clz tinyperfmon)
- (libraries core))
+ (modules clz)
+ (libraries core tinyperfmon))
+
+(executable
+ (name popcnt)
+ (modules popcnt)
+ (libraries core tinyperfmon))

@@ -3,6 +3,7 @@ set -x
 
 ./bin/clz_standard.exe
 ./bin/clz_lzcnt.exe
+./bin/popcnt_popcnt.exe
 
 set +x
 

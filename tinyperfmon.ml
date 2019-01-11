@@ -32,6 +32,6 @@ let report t =
     let span = Time_stamp_counter.Span.of_int_exn diff in
     let time = Time_stamp_counter.Span.to_ns span in
     let s = Int63.to_string_hum ~delimiter:',' time in
-    printf "%s\n" s
+    printf "%sns\n" s
   end
 

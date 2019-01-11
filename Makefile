@@ -1,5 +1,7 @@
 SHELL=bash
 
+all: clz popcnt
+
 clz:
 	dune build clz.exe --profile standard
 	cp _build/default/clz.exe bin/clz_standard.exe
@@ -8,7 +10,12 @@ clz:
 	cp _build/default/clz.exe bin/clz_lzcnt.exe
 	objdump -d bin/clz_lzcnt.exe > obj/clz_lzcnt.exe.s
 
+popcnt:
+	dune build popcnt.exe --profile popcnt
+	cp _build/default/popcnt.exe bin/popcnt_popcnt.exe
+	objdump -d bin/popcnt_popcnt.exe > obj/popcnt_popcnt.exe.s
+
 clean:
 	rm bin/* obj/*
 
-.PHONY: clz clean
+.PHONY: clz clean popcnt all
