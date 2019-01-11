@@ -17,7 +17,7 @@ let () =
   done;
   TP.stop t;
   ignore (opaque !e);
-  TP.report t;
+  TP.report t "clz";
   ()
 
 

@@ -1,11 +1,15 @@
 #!/usr/bin/env sh
-set -x
 
-./bin/clz_standard.exe
-./bin/clz_lzcnt.exe
-./bin/popcnt_popcnt.exe
+runit () {
+    echo $1
+    $1
+}
 
-set +x
+runit ./bin/clz_standard.exe
+runit ./bin/clz_lzcnt.exe
+runit ./bin/popcnt_popcnt.exe
+
+
 
 # EVENTS=`
 #   `instructions,`
